@@ -13,7 +13,7 @@ const Home = () => {
     <div className="home-container">
       <div className="hero-content">
         <div className="profile-picture">
-          <img src="public/image.png" alt="Pranav" className="profile-image" />
+          <img src="/image.png" alt="Pranav" className="profile-image" />
         </div>
         <div className="text-content">
           <h1>Hi, I'm Pranav Malhotra</h1>
@@ -21,7 +21,7 @@ const Home = () => {
             I'm a software engineer specializing in building and designing innovative digital experiences. 
           </p>
           <div className="cta-buttons">
-        <a href="public/Pranav_Malhotra_Resume.pdf" download className="btn">Download Resume</a>
+        <a href="/Pranav_Malhotra_Resume.pdf" download className="btn">Download Resume</a>
           <button onClick={togglePopup} className="btn">Contact Me</button>
         </div>
         </div>
