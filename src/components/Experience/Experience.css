@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(181, 227, 255);
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 93vh;
+  background-color: rgb(181, 227, 255);
+  border: 8px solid #2d38d3;
+  border-top: none;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.experience-item ul li {
+  margin-bottom: 5px;
+  color: rgb(52, 52, 52);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.experience-container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.experience-container:nth-child(odd) {
+  background-color: rgb(142, 190, 247);
+}
+
+.experience-container:nth-child(even) {
+  background-color: rgb(142, 190, 247);
+}
+
+.experience-container + .experience-container {
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-item {
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s forwards;
+}
+
+.experience-item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.experience-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#EXPtitle{
+  font-size: 1.8rem;
+  color: #2d38d3;
+  margin-bottom: 10px;
+}
+
+#Cname {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

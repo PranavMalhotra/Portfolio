@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(181, 227, 255);
+  width: 100%;
+  border: 8px solid #2d38d3;
+  border-top: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 50%;
+  animation: slideOut 1s forwards;
+}
+
+.text-content {
+  flex: 1;
+  text-align: center;
+  margin-top: 100px;
+  animation: slideIn 1s forwards;
+}
+
+.text-content h1 {
+  font-size: 4.5rem;
+  margin: 0;
+  color: #2d38d3;
+}
+
+.text-content p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: rgb(104, 104, 104);
+  margin: 0;
+}
+
+.btn,
+.close-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #2d38d3;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid #2d38d3;
+  background-color: rgb(181, 227, 255);
+  width: 200px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.btn:hover,
+.close-btn:hover {
+  background-color: #76b8ff;
+}
+
+.why-hire-me {
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+
+.why-hire-me h2 {
+  font-size: 3rem;
+  color: #2d38d3;
+  margin-bottom: 20px;
+}
+
+.why-hire-me p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgb(104, 104, 104)
+}
+
+.cta-buttons {
+  margin-top: 50px;
+}
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: rgb(181, 227, 255);
+  padding: 20px;
+  opacity: 1;
+  border-radius: 8px;
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-picture {
+    margin: 20px 0;
+  }
+
+  .text-content {
+    text-align: center;
+    padding: 20px;
+  }
+}
