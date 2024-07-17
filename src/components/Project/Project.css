@@ -67,12 +67,31 @@ a {
 .row6item1 { grid-column: span 1; background-color: rgb(255, 172, 172); animation: slideUp 2.5s forwards; }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projpage-container {
+    padding: 10px;
+    border-width: 8px;
   }
 
-  .project-item.wide {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .project-item {
+    height: 150px;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .project-item:hover {
+    height: 160px;
+  }
+
+  .row1item1, .row1item2, .row2item1, .row2item2, .row3item1, .row3item2, .row4item1, .row4item2, .row5item1, .row5item2, .row6item1 {
     grid-column: span 1;
+    animation-duration: 0.5s;
   }
 }
 @media (max-width: 600px) {
