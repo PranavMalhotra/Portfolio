@@ -6,22 +6,44 @@ body {
 
 @keyframes slideIn {
   from {
-    transform: translateX(-50%);
-    opacity: 0;
+    transform: translateY(400%);
+    opacity: 1;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-400%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(400%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0%);
     opacity: 1;
   }
 }
 
 @keyframes slideOut {
   from {
-    transform: translateX(50%);
-    opacity: 0;
+    transform: translateY(-400%);
+    opacity: 1;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0%);
     opacity: 1;
   }
 }
@@ -31,43 +53,115 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(181, 227, 255);
+  background-color: #FFF3E3;
   width: 100%;
-  border: 8px solid #2d38d3;
+  border: 8px solid #ff8484;
   border-top: none;
   box-sizing: border-box;
   overflow: hidden;
   padding: 20px;
 }
 
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #ffa2a2;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.linkedin-icon,
+.github-icon,
+.document-icon,
+.contact-icon {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-icon{
+  animation: slideIn 1s forwards;  
+}
+.linkedin-icon{
+  animation: slideOut 1s forwards;
+}
+.document-icon{
+  animation: slideLeft 1s forwards;
+}
+.contact-icon{
+  animation: slideRight 1s forwards;
+}
+
+.linkedin-icon a,
+.github-icon a,
+.document-icon a,
+.contact-icon button {
+  color: inherit;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin-icon a:hover,
+.github-icon a:hover,
+.document-icon a:hover,
+.contact-icon button:hover {
+  transform: scale(1.1);
+}
+
+.linkedin-icon a {
+  color: #ffa2a2;
+}
+
+.linkedin-icon a:hover {
+  color: #005582;
+}
+
+.github-icon a {
+  color: #ffa2a2; 
+}
+
+.github-icon a:hover {
+  color: #6e5494;
+}
+
+.document-icon a {
+  color: #ffa2a2;
+}
+
+.document-icon a:hover{
+  color: #ffffff
+}
+.contact-icon button:hover {
+  color: #ef805e;
+}
+
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  flex-direction: column;
   margin-bottom: 20px;
-  margin-top: 100px;
-}
-
-.profile-picture {
-  width: 250px;
-  height: 250px;
-  margin-right: 20px;
-  border-radius: 50%;
-  animation: slideOut 1s forwards;
+  height: auto;
 }
 
 .text-content {
-  flex: 1;
   text-align: center;
-  margin-top: 100px;
   animation: slideIn 1s forwards;
+  padding: 20px;
 }
 
 .text-content h1 {
   font-size: 4.5rem;
-  margin: 0;
-  color: #2d38d3;
+  margin-top: 20px;
+  color: #ff9694;
+  font-family: "Caveat", cursive;
 }
 
 .text-content p {
@@ -75,6 +169,11 @@ body {
   line-height: 1.6;
   color: rgb(104, 104, 104);
   margin: 0;
+  font-family: "Exo 2";
+}
+
+.cta-buttons {
+  margin-top: 20px;
 }
 
 .btn,
@@ -85,7 +184,7 @@ body {
   color: #2d38d3;
   text-decoration: none;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-top: 10px;
   border: 1px solid #2d38d3;
   background-color: rgb(181, 227, 255);
   width: 200px;
@@ -100,14 +199,15 @@ body {
 
 .why-hire-me {
   text-align: center;
-  margin-top: 300px;
-  margin-bottom: 100px;
-  max-width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 800px;
 }
 
 .why-hire-me h2 {
   font-size: 3rem;
-  color: #2d38d3;
+  color: #ffa2a2;
+  font-family: "Caveat", cursive;
   margin-bottom: 20px;
 }
 
@@ -115,11 +215,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: rgb(104, 104, 104);
-  padding: 20px;
-}
-
-.cta-buttons {
-  margin-top: 50px;
+  font-family: "Exo 2";
 }
 
 .popup-backdrop {
@@ -140,8 +236,8 @@ body {
   opacity: 1;
   border-radius: 8px;
   text-align: center;
-  width: 500px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,17 +248,49 @@ body {
   margin-top: 0;
 }
 
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon button {
+  background: none;
+  border: none;     
+  cursor: pointer;  
+  color: #ffa2a2;   
+  padding: 0;     
+}
+
 @media (max-width: 768px) {
+  .linkedin-icon,
+  .github-icon,
+  .document-icon,
+  .contact-icon {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .linkedin-icon a,
+  .github-icon a,
+  .document-icon a,
+  .contact-icon button {
+    font-size: 2.5rem;
+  }
+
   .hero-content {
-    flex-direction: column;
     align-items: center;
   }
 
   .profile-picture {
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .text-content {
@@ -171,6 +299,6 @@ body {
   }
 
   .btn {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }

@@ -17,8 +17,8 @@ body {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgb(181, 227, 255);
-  border: 8px solid #2d38d3;
+  background-color: #FFF3E3;
+  border: 8px solid #ff8484;
   border-top: none;
 }
 
@@ -42,10 +42,11 @@ body {
   height: 200px;
   color: white;
   border: 2px solid white;
+  font-family: "Exo 2";
 }
 
 .project-item:hover {
-  box-shadow: 0 0 2px 2px rgb(0, 7, 137);
+  box-shadow: 0 0 2px 2px rgb(255, 89, 0);
   border: 0;
   height: 210px;
 }
